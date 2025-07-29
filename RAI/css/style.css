@@ -21,10 +21,11 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.13);
 }
 .epoca-img {
-  width: 100px;
-  height: 100px;
+  /*width: 100px;
+  height: 100px;*/
+  width: 100%;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 0;
   margin-bottom: 14px;
   border: 2px solid #ff6600;
 }
@@ -52,7 +53,7 @@
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
   margin: 30px auto 20px auto;
-  max-width: 900px;
+  /* max-width eliminado para ocupar todo el ancho disponible */
   padding: 32px 24px 24px 24px;
 }
 .bienvenida-text {
@@ -669,6 +670,15 @@ footer p {
     font-size: 1em;
   }
 
+  .epocas-musicales {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .epoca-card {
+    width: 100%;
+    max-width: 350px;
+  }
   .content-grid,
   .team-grid {
     grid-template-columns: 1fr;

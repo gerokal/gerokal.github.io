@@ -11,17 +11,17 @@ const homeTemplate_es = `
             <p>Bienvenido a STEREO 97.9 FM, la emisora que llena el vacío musical en Santa Cruz. Nuestra programación está pensada para el público adulto contemporáneo que busca calidad, nostalgia y variedad. Aquí disfrutarás de los grandes éxitos de los 80s, 90s y 2000, tanto en inglés como en español, abarcando géneros como rock and roll, pop rock, rock latino, rock alternativo, dance y baladas. Nos diferenciamos por no incluir géneros urbanos, manteniendo el espíritu clásico y elegante de la radio.</p>
             <div class="epocas-musicales">
                 <div class="epoca-card epoca-80s">
-                    <img src="images/hero1.jpg" alt="80s" class="epoca-img">
+                    <img src="images/radio.jpg" alt="80s" class="epoca-img">
                     <h3>Éxitos de los 80s</h3>
                     <p>Rock, pop y baladas que marcaron una generación. Revive la energía y el estilo único de los años 80.</p>
                 </div>
                 <div class="epoca-card epoca-90s">
-                    <img src="images/hero3.jpg" alt="90s" class="epoca-img">
+                    <img src="images/radio2.jpg" alt="90s" class="epoca-img">
                     <h3>Clásicos de los 90s</h3>
                     <p>La década dorada del pop rock y el rock latino. Descubre los himnos que siguen sonando hoy.</p>
                 </div>
                 <div class="epoca-card epoca-2000s">
-                    <img src="images/hero.jpg" alt="2000s" class="epoca-img">
+                    <img src="images/radio3.jpg" alt="2000s" class="epoca-img">
                     <h3>Hits de los 2000</h3>
                     <p>Lo mejor del nuevo milenio: baladas, dance y rock alternativo para acompañar tus recuerdos.</p>
                 </div>
@@ -46,6 +46,7 @@ const aboutTemplate_es = `
             <p>Nuestra señal cubre toda la ciudad de Santa Cruz: desde Paurito en el sur, Warnes en el norte, Cotoca en el este y La Guardia y Porongo en el oeste. También puedes escucharnos por internet a través de nuestra app disponible en Play Store.</p>
         </div>
         <h2>Equipo</h2>
+        <p>Nuestro equipo está conformado por profesionales apasionados por la radio, dedicados a brindar una experiencia única y cercana a nuestros oyentes.</p>
         <div class="equipo-cards">
             <div class="equipo-card">
                 <img class="equipo-avatar" src="images/Logo_RAI.png" alt="Mario Rosado">
@@ -107,6 +108,10 @@ const aboutTemplate_es = `
                 <div class="equipo-nombre">Herland Castaña</div>
                 <div class="equipo-rol">Conductor</div>
             </div>
+        </div>
+        <div class="mission-values">
+            <h2>Misión y Valores</h2>
+            <p>Nuestra misión es inspirar, informar y entretener a través de una programación de calidad, promoviendo la cultura y los valores positivos en nuestra comunidad. Nos guiamos por la integridad, el respeto, la innovación y el compromiso con nuestros oyentes.</p>
         </div>
     </section>
 `;
