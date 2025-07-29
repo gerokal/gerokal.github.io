@@ -3,12 +3,17 @@ const homeTemplate_es = `
     <section class="hero">
         <div class="hero-content">
             <h1>Stereo 97.9 FM</h1>
-            <p>Bienvenido a STEREO 97.9 FM, la emisora que llena el vacío musical en Santa Cruz. Disfruta de la mejor selección de música de los 80s, 90s y 2000, en inglés y español, pensada para el público adulto contemporáneo.</p>
+            <div class="slogan">La primera estación premium de Bolivia</div>
         </div>
     </section>
-    <section class="coverage">
-        <h2>Cobertura</h2>
-        <p>Nuestra señal cubre toda la ciudad de Santa Cruz: desde Paurito en el sur, Warnes en el norte, Cotoca en el este y La Guardia y Porongo en el oeste. También puedes escucharnos por internet a través de nuestra app disponible en Play Store.</p>
+    <section class="bienvenida-coverage">
+        <div class="bienvenida-text">
+            <p>Bienvenido a STEREO 97.9 FM, la emisora que llena el vacío musical en Santa Cruz. Disfruta de la mejor selección de música de los 80s, 90s y 2000, en inglés y español, pensada para el público adulto contemporáneo.</p>
+        </div>
+        <div class="coverage">
+            <h2>Cobertura</h2>
+            <p>Nuestra señal cubre toda la ciudad de Santa Cruz: desde Paurito en el sur, Warnes en el norte, Cotoca en el este y La Guardia y Porongo en el oeste. También puedes escucharnos por internet a través de nuestra app disponible en Play Store.</p>
+        </div>
     </section>
     <section class="call-to-action">
         <h2>¡Únete a Nuestra Comunidad!</h2>
@@ -24,20 +29,68 @@ const aboutTemplate_es = `
         <h1>Acerca de Nosotros</h1>
         <p>Somos STEREO 97 - RADIO ANDRÉS IBÁÑEZ, una emisora dedicada a ofrecer una programación enfocada en rock and roll, pop rock, rock latino, rock alternativo, dance y baladas, evitando géneros urbanos. Nuestro equipo de locutores destacados informa y entretiene con programas de calidad, dirigidos a quienes valoran la buena música y la compañía radial.</p>
         <h2>Equipo</h2>
-        <ul>
-            <li>Mario Rosado</li>
-            <li>Marcelo Vera</li>
-            <li>Róger Romay</li>
-            <li>José Pomacusi</li>
-            <li>María René Lievana</li>
-            <li>Marcelo Valencia</li>
-            <li>Eduardo Martínez</li>
-            <li>Manolo DJ</li>
-            <li>Juan Carlos Quisbert</li>
-            <li>Edgar Mesa</li>
-            <li>Marcelo La Fuente</li>
-            <li>Herland Castaña</li>
-        </ul>
+        <div class="equipo-cards">
+            <div class="equipo-card">
+                <img class="equipo-avatar" src="images/Logo_RAI.png" alt="Mario Rosado">
+                <div class="equipo-nombre">Mario Rosado</div>
+                <div class="equipo-rol">Conductor</div>
+            </div>
+            <div class="equipo-card">
+                <img class="equipo-avatar" src="images/Logo_RAI.png" alt="Marcelo Vera">
+                <div class="equipo-nombre">Marcelo Vera</div>
+                <div class="equipo-rol">Conductor</div>
+            </div>
+            <div class="equipo-card">
+                <img class="equipo-avatar" src="images/Logo_RAI.png" alt="Róger Romay">
+                <div class="equipo-nombre">Róger Romay</div>
+                <div class="equipo-rol">Conductor</div>
+            </div>
+            <div class="equipo-card">
+                <img class="equipo-avatar" src="images/Logo_RAI.png" alt="José Pomacusi">
+                <div class="equipo-nombre">José Pomacusi</div>
+                <div class="equipo-rol">Conductor</div>
+            </div>
+            <div class="equipo-card">
+                <img class="equipo-avatar" src="images/Logo_RAI.png" alt="María René Lievana">
+                <div class="equipo-nombre">María René Lievana</div>
+                <div class="equipo-rol">Conductor</div>
+            </div>
+            <div class="equipo-card">
+                <img class="equipo-avatar" src="images/Logo_RAI.png" alt="Marcelo Valencia">
+                <div class="equipo-nombre">Marcelo Valencia</div>
+                <div class="equipo-rol">Conductor</div>
+            </div>
+            <div class="equipo-card">
+                <img class="equipo-avatar" src="images/Logo_RAI.png" alt="Eduardo Martínez">
+                <div class="equipo-nombre">Eduardo Martínez</div>
+                <div class="equipo-rol">Conductor</div>
+            </div>
+            <div class="equipo-card">
+                <img class="equipo-avatar" src="images/Logo_RAI.png" alt="Manolo DJ">
+                <div class="equipo-nombre">Manolo DJ</div>
+                <div class="equipo-rol">Conductor</div>
+            </div>
+            <div class="equipo-card">
+                <img class="equipo-avatar" src="images/Logo_RAI.png" alt="Juan Carlos Quisbert">
+                <div class="equipo-nombre">Juan Carlos Quisbert</div>
+                <div class="equipo-rol">Conductor</div>
+            </div>
+            <div class="equipo-card">
+                <img class="equipo-avatar" src="images/Logo_RAI.png" alt="Edgar Mesa">
+                <div class="equipo-nombre">Edgar Mesa</div>
+                <div class="equipo-rol">Conductor</div>
+            </div>
+            <div class="equipo-card">
+                <img class="equipo-avatar" src="images/Logo_RAI.png" alt="Marcelo La Fuente">
+                <div class="equipo-nombre">Marcelo La Fuente</div>
+                <div class="equipo-rol">Conductor</div>
+            </div>
+            <div class="equipo-card">
+                <img class="equipo-avatar" src="images/Logo_RAI.png" alt="Herland Castaña">
+                <div class="equipo-nombre">Herland Castaña</div>
+                <div class="equipo-rol">Conductor</div>
+            </div>
+        </div>
     </section>
 `;
 

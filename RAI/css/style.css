@@ -1,3 +1,130 @@
+/* Slogan debajo del título principal */
+.slogan {
+  font-size: 1.5em;
+  color: #ff6600;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Sección de bienvenida en la home */
+.bienvenida-coverage {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  margin: 30px auto 20px auto;
+  max-width: 900px;
+  padding: 32px 24px 24px 24px;
+}
+.bienvenida-text {
+  margin-bottom: 24px;
+}
+.bienvenida-text p {
+  font-size: 1.15em;
+  text-align: center;
+  color: #333;
+  margin-bottom: 0;
+}
+/* Contact Page Styles */
+.contact-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-content h1 {
+  color: #ff6600;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+.contact-content p {
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+.contact-content ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.contact-content ul li {
+  display: inline-block;
+  background: #ff6600;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 5px 10px;
+  font-weight: bold;
+}
+
+/* Privacy Page Styles */
+.privacy-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.privacy-content h1 {
+  color: #ff6600;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+.privacy-content p {
+  text-align: center;
+  font-size: 1.1em;
+}
+
+/* Equipo Cards for About Page */
+.equipo-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 30px;
+}
+.equipo-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px 18px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.equipo-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.13);
+}
+.equipo-card .equipo-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  background: #eee;
+  border: 2px solid #ff6600;
+}
+.equipo-card .equipo-nombre {
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #ff6600;
+  margin-bottom: 6px;
+}
+.equipo-card .equipo-rol {
+  font-size: 0.98em;
+  color: #555;
+  margin-bottom: 4px;
+}
 /* General Body and Layout */
 body {
   font-family: Arial, sans-serif;
