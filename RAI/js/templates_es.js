@@ -8,11 +8,24 @@ const homeTemplate_es = `
     </section>
     <section class="bienvenida-coverage">
         <div class="bienvenida-text">
-            <p>Bienvenido a STEREO 97.9 FM, la emisora que llena el vacío musical en Santa Cruz. Disfruta de la mejor selección de música de los 80s, 90s y 2000, en inglés y español, pensada para el público adulto contemporáneo.</p>
-        </div>
-        <div class="coverage">
-            <h2>Cobertura</h2>
-            <p>Nuestra señal cubre toda la ciudad de Santa Cruz: desde Paurito en el sur, Warnes en el norte, Cotoca en el este y La Guardia y Porongo en el oeste. También puedes escucharnos por internet a través de nuestra app disponible en Play Store.</p>
+            <p>Bienvenido a STEREO 97.9 FM, la emisora que llena el vacío musical en Santa Cruz. Nuestra programación está pensada para el público adulto contemporáneo que busca calidad, nostalgia y variedad. Aquí disfrutarás de los grandes éxitos de los 80s, 90s y 2000, tanto en inglés como en español, abarcando géneros como rock and roll, pop rock, rock latino, rock alternativo, dance y baladas. Nos diferenciamos por no incluir géneros urbanos, manteniendo el espíritu clásico y elegante de la radio.</p>
+            <div class="epocas-musicales">
+                <div class="epoca-card epoca-80s">
+                    <img src="images/hero1.jpg" alt="80s" class="epoca-img">
+                    <h3>Éxitos de los 80s</h3>
+                    <p>Rock, pop y baladas que marcaron una generación. Revive la energía y el estilo único de los años 80.</p>
+                </div>
+                <div class="epoca-card epoca-90s">
+                    <img src="images/hero3.jpg" alt="90s" class="epoca-img">
+                    <h3>Clásicos de los 90s</h3>
+                    <p>La década dorada del pop rock y el rock latino. Descubre los himnos que siguen sonando hoy.</p>
+                </div>
+                <div class="epoca-card epoca-2000s">
+                    <img src="images/hero.jpg" alt="2000s" class="epoca-img">
+                    <h3>Hits de los 2000</h3>
+                    <p>Lo mejor del nuevo milenio: baladas, dance y rock alternativo para acompañar tus recuerdos.</p>
+                </div>
+            </div>
         </div>
     </section>
     <section class="call-to-action">
@@ -28,6 +41,10 @@ const aboutTemplate_es = `
     <section class="about-us-content">
         <h1>Acerca de Nosotros</h1>
         <p>Somos STEREO 97 - RADIO ANDRÉS IBÁÑEZ, una emisora dedicada a ofrecer una programación enfocada en rock and roll, pop rock, rock latino, rock alternativo, dance y baladas, evitando géneros urbanos. Nuestro equipo de locutores destacados informa y entretiene con programas de calidad, dirigidos a quienes valoran la buena música y la compañía radial.</p>
+        <div class="coverage">
+            <h2>Cobertura</h2>
+            <p>Nuestra señal cubre toda la ciudad de Santa Cruz: desde Paurito en el sur, Warnes en el norte, Cotoca en el este y La Guardia y Porongo en el oeste. También puedes escucharnos por internet a través de nuestra app disponible en Play Store.</p>
+        </div>
         <h2>Equipo</h2>
         <div class="equipo-cards">
             <div class="equipo-card">
@@ -97,6 +114,7 @@ const aboutTemplate_es = `
 const scheduleTemplate_es = `
     <section class="schedule-content">
         <h1>Programación</h1>
+        <p class="schedule-intro">Descubre la variedad de programas y conductores que acompañan tu día en STEREO 97.9 FM. Nuestra programación está pensada para ofrecerte música, información y entretenimiento de calidad, todos los días de la semana.</p>
         <div class="schedule-grid">
             <h2>Lunes a Viernes</h2>
             <div class="day-schedule"><div class="show-time">07:00 - 08:00</div><div class="show-details"><h3>EL LOBO DEL AIRE</h3><p>Mario Rosado</p></div></div>

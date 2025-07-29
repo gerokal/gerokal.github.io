@@ -1,3 +1,42 @@
+/* Épocas musicales en la home */
+.epocas-musicales {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 32px;
+  margin-bottom: 10px;
+}
+.epoca-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 22px 16px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.2s;
+  border-top: 5px solid #ff6600;
+}
+.epoca-card:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.13);
+}
+.epoca-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 14px;
+  border: 2px solid #ff6600;
+}
+.epoca-card h3 {
+  color: #ff6600;
+  font-size: 1.15em;
+  margin-bottom: 8px;
+}
+.epoca-card p {
+  font-size: 0.98em;
+  color: #555;
+}
 /* Slogan debajo del título principal */
 .slogan {
   font-size: 1.5em;
