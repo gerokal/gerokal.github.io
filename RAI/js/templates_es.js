@@ -1,9 +1,8 @@
 const homeTemplate_es = `
-
     <section class="hero">
         <div class="hero-content">
             <h1>Stereo 97.9 FM</h1>
-            <div class="slogan">La primera estación premium de Bolivia</div>
+            <div class="slogan" id="slogan-dinamico">La primera estación premium de Bolivia</div>
         </div>
     </section>
     <section class="bienvenida-coverage">

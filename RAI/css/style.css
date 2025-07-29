@@ -1,3 +1,13 @@
+html, body {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}
+
+/* Titulos y encabezados con Roboto */
+h1, h2, h3, h4, h5, h6, .logo, .slogan {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
 /* Épocas musicales en la home */
 .epocas-musicales {
   display: flex;
@@ -10,11 +20,12 @@
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 22px 16px;
-  width: 220px;
+  padding: 32px 24px;
+  width: 240px;
   text-align: center;
   transition: transform 0.2s;
   border-top: 5px solid #ff6600;
+  margin-bottom: 18px;
 }
 .epoca-card:hover {
   transform: translateY(-6px) scale(1.04);
@@ -40,39 +51,59 @@
 }
 /* Slogan debajo del título principal */
 .slogan {
-  font-size: 1.5em;
+  font-size: 2.1em;
   color: #ff6600;
-  margin-top: 10px;
+  margin-top: 18px;
+  margin-bottom: 18px;
   font-weight: bold;
   text-align: left;
+  letter-spacing: 1.5px;
+  transition: color 0.3s;
+  min-height: 2.7em;
+}
+
+/* Animaciones para slogan dinámico */
+.fade-in {
+  animation: fadeInSlogan 0.5s;
+}
+.fade-out {
+  animation: fadeOutSlogan 0.4s;
+}
+@keyframes fadeInSlogan {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeOutSlogan {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 /* Sección de bienvenida en la home */
 .bienvenida-coverage {
   background: #fff;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-  margin: 30px auto 20px auto;
-  /* max-width eliminado para ocupar todo el ancho disponible */
-  padding: 32px 24px 24px 24px;
+  margin: 40px auto 32px auto;
+  padding: 40px 32px 32px 32px;
 }
 .bienvenida-text {
   margin-bottom: 24px;
 }
 .bienvenida-text p {
-  font-size: 1.15em;
-  text-align: center;
+  font-size: 1.18em;
+  text-align: left;
   color: #333;
-  margin-bottom: 0;
+  margin-bottom: 18px;
+  line-height: 1.8;
 }
 /* Contact Page Styles */
 .contact-content {
   background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
+  padding: 40px 36px;
+  border-radius: 12px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  max-width: 600px;
+  margin-bottom: 32px;
+  max-width: 650px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -105,11 +136,11 @@
 /* Privacy Page Styles */
 .privacy-content {
   background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
+  padding: 40px 36px;
+  border-radius: 12px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  max-width: 600px;
+  margin-bottom: 32px;
+  max-width: 650px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -136,10 +167,11 @@
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 24px 18px;
-  width: 220px;
+  padding: 32px 22px;
+  width: 240px;
   text-align: center;
   transition: transform 0.2s;
+  margin-bottom: 18px;
 }
 .equipo-card:hover {
   transform: translateY(-6px) scale(1.03);
@@ -167,7 +199,6 @@
 }
 /* General Body and Layout */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding-bottom: 120px; /* Increased padding for fixed audio player on mobile */
   background-color: #f4f4f4;
@@ -232,8 +263,8 @@ nav ul li a:focus {
 /* Main Content Area */
 main {
   max-width: 1200px;
-  margin: 20px auto;
-  padding: 0 20px;
+  margin: 36px auto;
+  padding: 0 32px;
 }
 
 /* Hero Section */
@@ -241,9 +272,9 @@ main {
   background: url("../images/hero.jpg") no-repeat center center/cover;
   color: #fff;
   text-align: center;
-  padding: 100px 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  padding: 120px 32px 110px 32px;
+  border-radius: 12px;
+  margin-bottom: 36px;
   position: relative;
 }
 
@@ -262,18 +293,21 @@ main {
   position: relative;
   z-index: 1;
   text-align: left;
+  padding-left: 16px;
 }
 
 .hero h1 {
-  font-size: 3.5em;
-  margin-bottom: 10px;
+  font-size: 3.8em;
+  margin-bottom: 24px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  letter-spacing: 2px;
 }
 
 .hero p {
-  font-size: 1.5em;
-  margin-bottom: 30px;
+  font-size: 1.6em;
+  margin-bottom: 36px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  line-height: 1.7;
 }
 
 .btn-listen-live {
@@ -424,20 +458,21 @@ main {
 .call-to-action {
   background-color: #333;
   color: #fff;
-  padding: 40px;
-  border-radius: 8px;
+  padding: 56px 32px;
+  border-radius: 12px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
 }
 
 .call-to-action h2 {
-  font-size: 2.5em;
-  margin-bottom: 15px;
+  font-size: 2.7em;
+  margin-bottom: 24px;
 }
 
 .call-to-action p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
+  font-size: 1.25em;
+  margin-bottom: 36px;
+  line-height: 1.7;
 }
 
 .btn-social {
