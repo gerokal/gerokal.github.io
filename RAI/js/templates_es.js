@@ -5,6 +5,9 @@ const homeTemplate_es = `
             <div class="slogan" id="slogan-dinamico">La primera estación premium de Bolivia</div>
         </div>
     </section>
+    <section class="live-show-section">
+        <div id="live-show">Cargando programa en vivo...</div>
+    </section>
     <section class="bienvenida-coverage">
         <div class="bienvenida-text">
             <p>Bienvenido a STEREO 97.9 FM, la emisora que llena el vacío musical en Santa Cruz. Nuestra programación está pensada para el público adulto contemporáneo que busca calidad, nostalgia y variedad. Aquí disfrutarás de los grandes éxitos de los 80s, 90s y 2000, tanto en inglés como en español, abarcando géneros como rock and roll, pop rock, rock latino, rock alternativo, dance y baladas. Nos diferenciamos por no incluir géneros urbanos, manteniendo el espíritu clásico y elegante de la radio.</p>

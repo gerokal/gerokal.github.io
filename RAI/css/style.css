@@ -1,3 +1,124 @@
+.live-show-vertical {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  align-items: stretch;
+  width: 100%;
+  text-align: center;
+}
+.live-show-prev, .live-show-next {
+  background: #f7f7f7;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 1em;
+  color: #444;
+  min-height: 32px;
+}
+.live-show-current {
+  background: #fff3e0;
+  border-radius: 16px;
+  padding: 38px 38px;
+  font-size: 1.65em;
+  color: #222;
+  font-weight: bold;
+  box-shadow: 0 6px 24px rgba(255,102,0,0.15);
+  min-height: 100px;
+  margin: 2px 0;
+  z-index: 1;
+  position: relative;
+  flex: 2 1 0;
+}
+.live-show-music {
+  background: #ffe7c2;
+  color: #b85c00;
+  font-size: 1.25em;
+  font-weight: 600;
+  border: 2px dashed #ff6600;
+  box-shadow: 0 2px 12px rgba(255,102,0,0.09);
+}
+.live-show-vertical .label {
+  color: #ff6600;
+  font-weight: bold;
+  margin-right: 6px;
+}
+.live-show-vertical .show-title {
+  font-weight: bold;
+}
+.live-show-vertical .host {
+  color: #555;
+  font-size: 0.97em;
+  margin-left: 4px;
+}
+.live-show-vertical .show-time, .live-show-vertical .next-time {
+  color: #ff6600;
+  margin-left: 8px;
+  font-size: 0.97em;
+}
+.live-show-vertical .ver-programacion {
+  display: inline-block;
+  margin-top: 8px;
+  color: #ff6600;
+  font-size: 0.97em;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.live-show-vertical .ver-programacion:hover {
+  color: #e65c00;
+}
+.live-show-section .next-show {
+  display: inline-block;
+  margin-top: 6px;
+  color: #444;
+  font-size: 0.98em;
+}
+.live-show-section .next-time {
+  color: #ff6600;
+  margin-left: 4px;
+}
+.live-show-section .ver-programacion {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ff6600;
+  font-size: 0.97em;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.live-show-section .ver-programacion:hover {
+  color: #e65c00;
+}
+/* Live Show Section */
+.live-show-section {
+  background: #fffbe6;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  margin: 0 0 32px 0;
+  padding: 18px 24px;
+  /* font-size: 1.18em; */
+  color: #222;
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+.live-show-prev, .live-show-next, .live-show-current {
+  flex: 1 1 0;
+  min-width: 0;
+  text-align: center;
+}
+.live-show-prev p,
+.live-show-next p,
+.live-show-current p {
+  margin-bottom: 6px;
+  margin-top: 0;
+}
+}
+.live-show-section strong {
+  color: #ff6600;
+}
+.live-show-section .host {
+  color: #555;
+  font-size: 0.95em;
+  margin-left: 6px;
+}
 html, body {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   line-height: 1.7;
@@ -493,21 +614,23 @@ main {
 
 /* Footer */
 footer {
-  background-color: #222;
-  color: #fff;
-  padding: 30px 20px;
+  background-color: #181818;
+  color: #e0e0e0;
+  padding: 14px 8px 8px 8px;
   text-align: center;
-  border-top: 5px solid #ff6600;
+  border-top: 4px solid #ff6600;
+  font-size: 0.95em;
 }
 
 .footer-links {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .footer-links h3 {
-  font-size: 1.5em;
-  margin-bottom: 15px;
+  font-size: 1.1em;
+  margin-bottom: 8px;
   color: #ff6600;
+  letter-spacing: 1px;
 }
 
 .footer-links ul {
@@ -516,25 +639,31 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 8px;
 }
 
 .footer-links ul li {
-  margin: 0 15px 10px;
+  margin: 0 6px 4px;
 }
 
 .footer-links ul li a {
-  color: #fff;
+  color: #e0e0e0;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.2s;
+  font-size: 0.98em;
+  padding: 2px 4px;
+  border-radius: 3px;
 }
 
 .footer-links ul li a:hover {
-  color: #ff6600;
+  color: #fff;
+  background: #ff6600;
 }
 
 footer p {
-  font-size: 0.9em;
-  color: #aaa;
+  font-size: 0.85em;
+  color: #b0b0b0;
+  margin: 6px 0 0 0;
 }
 
 /* About Us Page Specific Styles */
@@ -674,7 +803,17 @@ footer p {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .live-show-section {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .live-show-vertical {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
   nav {
     flex-direction: column;
     align-items: flex-start;

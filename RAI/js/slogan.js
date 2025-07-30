@@ -3,7 +3,7 @@
 function iniciarSloganDinamico() {
   const slogans = [
     "¡La mejor música, siempre contigo!",
-    "Stereo 97.9 FM: Tu compañía diaria.",
+    "Somos tu compañía diaria.",
     "Vive la radio, vive Stereo 97.9.",
     "La Primera Estación Premium de Bolivia.",
     "Donde la música cobra vida.",
