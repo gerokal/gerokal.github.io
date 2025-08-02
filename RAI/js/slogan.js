@@ -5,7 +5,7 @@ function iniciarSloganDinamico() {
     "¡La mejor música, siempre contigo!",
     "Somos tu compañía diaria.",
     "Vive la radio, vive Stereo 97.9.",
-    "La Primera Estación Premium de Bolivia.",
+    "La Primera estación premium de Bolivia.",
     "Donde la música cobra vida.",
     "¡Siente la diferencia en el dial!"
   ];
@@ -27,7 +27,7 @@ function iniciarSloganDinamico() {
     }, 100);
   }
   cambiarSlogan();
-  setInterval(cambiarSlogan, 8000);
+  setInterval(cambiarSlogan, 30000);
 }
 
 // Hook para SPA: ejecuta el slogan dinámico solo en la home

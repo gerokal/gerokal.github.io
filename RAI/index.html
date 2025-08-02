@@ -44,19 +44,14 @@
   <body>
     <header>
       <nav>
-        <a href="#home" class="logo" aria-label="Stereo 97.9 Inicio"
-          >Stereo 97.9</a
-        >
-        <ul>
+        <a href="#home" class="logo" aria-label="Stereo 97.9 Inicio">Stereo 97.9</a>
+        <button class="hamburger" aria-label="Abrir menú" aria-controls="main-menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="main-menu" class="nav-links">
           <li><a href="#home" aria-label="Ir a Inicio">Inicio</a></li>
-          <li>
-            <a href="#about" aria-label="Ir a Acerca de Nosotros"
-              >Acerca de Nosotros</a
-            >
-          </li>
-          <li>
-            <a href="#schedule" aria-label="Ir a Programación">Programación</a>
-          </li>
+          <li><a href="#about" aria-label="Ir a Acerca de Nosotros">Acerca de Nosotros</a></li>
+          <li><a href="#schedule" aria-label="Ir a Programación">Programación</a></li>
         </ul>
       </nav>
     </header>
@@ -113,5 +108,6 @@
     <script src="js/slogan.js" defer></script>
     <script src="js/router.js" defer></script>
     <script src="js/main.js" defer></script>
+    <!-- Hamburger menu JS movido a main.js -->
   </body>
 </html>

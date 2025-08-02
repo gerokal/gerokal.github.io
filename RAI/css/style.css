@@ -1,3 +1,101 @@
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 28px;
+  margin: 5px auto;
+  background: #ff6600;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.hamburger.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 1.5em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+    position: fixed;
+    top: 16px;
+    right: 20px;
+    margin: 0;
+    background: #222;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  nav .nav-links {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    background: #222;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    transform: translateY(-200%);
+    transition: transform 0.3s, opacity 0.3s;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    padding: 18px 0 18px 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  nav .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  nav .nav-links li {
+    margin: 0;
+  }
+  nav .nav-links li a {
+    color: #fff;
+    font-size: 1.4em;
+    background: none;
+    padding: 12px 32px;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
+    display: block;
+    text-align: center;
+  }
+  nav .nav-links li a:hover,
+  nav .nav-links li a:focus {
+    color: #ff6600;
+    background: #fff2e6;
+    outline: none;
+  }
+  .hamburger span {
+    background: #ff6600;
+  }
+}
 .live-show-vertical {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -805,7 +903,7 @@ footer p {
 /* Responsive Design */
 @media (max-width: 900px) {
   .live-show-section {
-    max-width: 600px;
+    /* max-width: 600px; */
     margin-left: auto;
     margin-right: auto;
   }
