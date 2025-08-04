@@ -1,7 +1,7 @@
 // Mostrar el programa en vivo según la hora actual y la programación
 
 function getCurrentShow(schedule) {
-  const now = new Date();
+  const now = getBoliviaDate();
   const day = now.getDay();
   const current = now.getHours() * 60 + now.getMinutes();
   for (const prog of schedule) {
@@ -16,7 +16,7 @@ function getCurrentShow(schedule) {
 }
 
 function getPrevShow(schedule) {
-  const now = new Date();
+  const now = getBoliviaDate();
   const day = now.getDay();
   const current = now.getHours() * 60 + now.getMinutes();
   let prev = null;
@@ -50,10 +50,9 @@ function getPrevShow(schedule) {
 }
 
 function getNextShow(schedule) {
-  const now = new Date();
+  const now = getBoliviaDate();
   const day = now.getDay();
   const current = now.getHours() * 60 + now.getMinutes();
-  // Buscar el siguiente programa de hoy
   let next = null;
   let minDiff = Infinity;
   for (const prog of schedule) {
@@ -84,6 +83,14 @@ function getNextShow(schedule) {
   return next;
 }
 
+// Devuelve un objeto Date con la hora actual de Bolivia (America/La_Paz)
+function getBoliviaDate() {
+  const now = new Date();
+  // Obtener la hora de Bolivia como string y parsear a Date
+  const boliviaString = now.toLocaleString('en-US', { timeZone: 'America/La_Paz' });
+  return new Date(boliviaString);
+}
+
 function renderLiveShow() {
   if (typeof schedule === 'undefined') return;
   const prev = getPrevShow(schedule);
@@ -91,11 +98,14 @@ function renderLiveShow() {
   const next = getNextShow(schedule);
   const el = document.getElementById('live-show');
   if (!el) return;
+  const isBolivia = Intl.DateTimeFormat().resolvedOptions().timeZone === 'America/La_Paz';
   let html = '<div class="live-show-vertical">';
   // 1. Programa anterior
   html += '<div class="live-show-prev">';
   if (prev) {
-    html += `<p class="label">Programa Anterior:</p><p class="show-title">${prev.show}</p><p class="host">${prev.host ? '(' + prev.host + ')' : ''}</p><p class="show-time">${prev.start} - ${prev.end}</p>`;
+    html += `<p class="label">Programa Anterior:</p><p class="show-title">${prev.show}</p><p class="host">${prev.host ? '(' + prev.host + ')' : ''}</p><p class="show-time">${prev.start} - ${prev.end}`;
+    if (!isBolivia) html += ` <span class='local-time'>(${formatLocalTimeRange(prev.start, prev.end)})</span>`;
+    html += `</p>`;
   } else {
     html += '<p>Sin registro anterior.</p>';
   }
@@ -103,7 +113,9 @@ function renderLiveShow() {
   // 2. Programa en vivo (destacado)
   if (show) {
     html += '<div class="live-show-current">';
-    html += `<p class="label">En vivo:</p><p class="show-title">${show.show}</p><p class="host">${show.host ? '(' + show.host + ')' : ''}</p><p class="show-time">${show.start} - ${show.end}</p>`;
+    html += `<p class="label">En vivo:</p><p class="show-title">${show.show}</p><p class="host">${show.host ? '(' + show.host + ')' : ''}</p><p class="show-time">${show.start} - ${show.end}`;
+    if (!isBolivia) html += ` <span class='local-time'>(${formatLocalTimeRange(show.start, show.end)})</span>`;
+    html += `</p>`;
     html += '</div>';
   } else {
     html += '<div class="live-show-current live-show-music" style="text-align:center;">';
@@ -113,11 +125,33 @@ function renderLiveShow() {
   // 3. Próximo programa y enlace
   html += '<div class="live-show-next">';
   if (next) {
-    html += `<p class="label">Próximo programa:</p><p class="show-title">${next.show}</p><p class="host">${next.host ? '(' + next.host + ')' : ''}</p><p class="next-time">a las ${next.start}</p>`;
+    html += `<p class="label">Próximo programa:</p><p class="show-title">${next.show}</p><p class="host">${next.host ? '(' + next.host + ')' : ''}</p><p class="next-time">a las ${next.start}`;
+    if (!isBolivia) html += ` <span class='local-time'>(${formatLocalTime(next.start)})</span>`;
+    html += `</p>`;
   }
   html += `<p><a href="#schedule" class="ver-programacion">Ver programación completa</a></p>`;
   html += '</div>';
   html += '</div>';
+  if (!isBolivia) {
+    html += `<p class="live-show-tz-info">Todos los horarios corresponden a la hora de Bolivia (GMT-4). Entre paréntesis se muestra tu hora local.</p>`;
+  }
+// Convierte una hora ("HH:MM") de Bolivia a la hora local del usuario
+function formatLocalTime(boliviaTime) {
+  // Obtener la fecha de hoy en Bolivia
+  const nowBolivia = getBoliviaDate();
+  const [h, m] = boliviaTime.split(":").map(Number);
+  // Crear una fecha en Bolivia con la hora dada
+  const boliviaDate = new Date(Date.UTC(nowBolivia.getFullYear(), nowBolivia.getMonth(), nowBolivia.getDate(), h + 4, m));
+  // Ajustar a la zona local del usuario
+  const local = new Date(boliviaDate.toLocaleString("en-US", { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone }));
+  // Formatear a HH:MM local
+  return local.toTimeString().slice(0,5);
+}
+
+// Convierte un rango de horas de Bolivia a la hora local del usuario
+function formatLocalTimeRange(start, end) {
+  return formatLocalTime(start) + ' - ' + formatLocalTime(end); //+ ' local';
+}
   el.innerHTML = html;
 }
 
