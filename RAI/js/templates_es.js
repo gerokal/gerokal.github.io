@@ -13,19 +13,31 @@ const homeTemplate_es = `
             <p>Bienvenido a STEREO 97.9 FM, la emisora que llena el vacío musical en Santa Cruz. Nuestra programación está pensada para el público adulto contemporáneo que busca calidad, nostalgia y variedad. Aquí disfrutarás de los grandes éxitos de los 80s, 90s y 2000, tanto en inglés como en español, abarcando géneros como rock and roll, pop rock, rock latino, rock alternativo, dance y baladas. Nos diferenciamos por no incluir géneros urbanos, manteniendo el espíritu clásico y elegante de la radio.</p>
             <div class="epocas-musicales">
                 <div class="epoca-card epoca-80s">
-                    <img src="images/radio.jpg" alt="80s" class="epoca-img">
-                    <h3>Éxitos de los 80s</h3>
-                    <p>Rock, pop y baladas que marcaron una generación. Revive la energía y el estilo único de los años 80.</p>
+                    <div class="epoca-img-container">
+                        <img src="images/radio.jpg" alt="80s" class="epoca-img">
+                    </div>
+                    <div class="epoca-textos">
+                        <h3>Éxitos de los 80s</h3>
+                        <p>Rock, pop y baladas que marcaron una generación. Revive la energía, el color y el estilo único de los años 80, una época donde la música se vivía con intensidad y creatividad. Disfruta de los grandes himnos que definieron una década inolvidable, desde los sintetizadores vibrantes hasta las baladas más emotivas. Sumérgete en la nostalgia y déjate llevar por los clásicos que siguen conquistando corazones.</p>
+                    </div>
                 </div>
                 <div class="epoca-card epoca-90s">
-                    <img src="images/radio2.jpg" alt="90s" class="epoca-img">
-                    <h3>Clásicos de los 90s</h3>
-                    <p>La década dorada del pop rock y el rock latino. Descubre los himnos que siguen sonando hoy.</p>
+                    <div class="epoca-img-container">
+                        <img src="images/radio2.jpg" alt="90s" class="epoca-img">
+                    </div>
+                    <div class="epoca-textos">
+                        <h3>Clásicos de los 90s</h3>
+                        <p>La década dorada del pop rock y el rock latino. Descubre los himnos que siguen sonando hoy y que acompañaron el cambio de milenio. Los 90s trajeron fusiones innovadoras, letras profundas y una explosión de géneros que marcaron a toda una generación. Vive la emoción de los grandes festivales, el auge de las bandas legendarias y la evolución del sonido latinoamericano en una selección musical que nunca pasa de moda.</p>
+                    </div>
                 </div>
                 <div class="epoca-card epoca-2000s">
-                    <img src="images/radio3.jpg" alt="2000s" class="epoca-img">
-                    <h3>Hits de los 2000</h3>
-                    <p>Lo mejor del nuevo milenio: baladas, dance y rock alternativo para acompañar tus recuerdos.</p>
+                    <div class="epoca-img-container">
+                        <img src="images/radio3.jpg" alt="2000s" class="epoca-img">
+                    </div>
+                    <div class="epoca-textos">
+                        <h3>Hits de los 2000</h3>
+                        <p>Lo mejor del nuevo milenio: baladas, dance y rock alternativo para acompañar tus recuerdos. Los 2000 fueron años de innovación, diversidad y grandes colaboraciones internacionales. Aquí encontrarás los éxitos que definieron la era digital, el resurgimiento de los géneros clásicos y la llegada de nuevas voces que revolucionaron la industria. Déjate sorprender por una selección vibrante y moderna que sigue vigente en la memoria colectiva.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -33,9 +45,9 @@ const homeTemplate_es = `
     <section class="call-to-action">
         <h2>¡Únete a Nuestra Comunidad!</h2>
         <p>Síguenos en las redes sociales y no te pierdas ninguna actualización.</p>
-        <a href="#" class="btn-social">Facebook</a>
-        <a href="#" class="btn-social">Twitter</a>
-        <a href="#" class="btn-social">Instagram</a>
+        <a href="https://www.facebook.com/stereo97.9/" class="btn-social" target="_blank" rel="noopener noreferrer">Facebook</a>
+       <!-- <a href="#" class="btn-social">Twitter</a>
+        <a href="#" class="btn-social">Instagram</a> -->
     </section>
 `;
 
