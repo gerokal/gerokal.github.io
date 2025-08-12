@@ -269,87 +269,106 @@ h1, h2, h3, h4, h5, h6, .logo, .slogan {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 /* Épocas musicales en la home: siempre en fila */
-.epocas-musicales {
-  margin-top: 32px;
-  margin-bottom: 10px;
+  .epocas-musicales {
+  margin: 48px auto 32px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
 }
 /* epoca-card en 2 columnas: contenedor imagen y contenedor textos */
 .epoca-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 24px 18px;
-  /* width: 100%; */
-  /* max-width: 900px; */
-  min-height: 140px;
   display: grid;
-  grid-template-columns: minmax(0, 240px) 1fr;
-  gap: 48px;
-  align-items: center;
-  border-top: 5px solid #ff6600;
-  margin-bottom: 24px;
-  transition: transform 0.2s;
+  grid-template-columns: 1fr 2fr;
+  align-items: stretch;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 48px 48px 48px 48px;
+  gap: 0 48px;
+  margin: 0;
+  min-height: 180px;
+  transition: background 0.2s;
 }
 .epoca-card .epoca-img-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 240px;
+  background: none;
+  padding: 0;
   width: 100%;
 }
 .epoca-card .epoca-img {
   width: 100%;
-  max-width: 240px;
-  aspect-ratio: 1/1;
+  height: 100%;
   object-fit: cover;
-  border-radius: 8px;
-  border: 2px solid #ff6600;
+  border-radius: 16px;
+  border: none;
   display: block;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
 }
 .epoca-card .epoca-textos {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: 100%;
   text-align: left;
+  gap: 32px;
+  padding: 0 0 0 0;
 }
 .epoca-card h3 {
   color: #ff6600;
-  font-size: 1.15em;
-  margin-bottom: 6px;
+  font-size: 1.45em;
+  margin-bottom: 24px;
   margin-top: 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 .epoca-card p {
-  font-size: 0.98em;
-  color: #555;
+  font-size: 1.08em;
+  color: #444;
   margin: 0;
+  font-weight: 300;
+  line-height: 1.85;
+  letter-spacing: 0.01em;
+  padding-bottom: 14px;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 @media (max-width: 900px) {
+  .epocas-musicales {
+    padding: 0 2vw;
+    gap: 24px;
+  }
   .epoca-card {
     grid-template-columns: 1fr;
-    padding: 18px 12px;
-    margin-bottom: 18px;
-  }
-  .epoca-card .epoca-img-container {
-    max-width: 100%;
-    margin-bottom: 12px;
-    justify-content: center;
+    padding: 24px 8px;
+    gap: 24px 0;
   }
   .epoca-card .epoca-img {
+    width: 100%;
     max-width: 100%;
-    max-height: 240px;
+    height: auto;
     margin: 0 auto;
     display: block;
   }
   .epoca-card .epoca-textos {
-    align-items: flex-start;
-    text-align: left;
+    padding: 0;
+    gap: 18px;
   }
- }
+}
 @media (max-width: 600px) {
   .epoca-card .epoca-img {
+    width: 100vw;
+    min-width: 0;
     max-height: 240px;
+    object-fit: cover;
+    display: block;
+    margin-left: -16px;
+    margin-right: -16px;
   }
 }
 .epoca-card:hover {
